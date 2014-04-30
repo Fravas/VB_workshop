@@ -1,0 +1,17 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim change, quarters, dimes, nickles, pennies As Double
+        change = CDbl(txtChange.Text)
+        quarters = Int(change / 25)
+        change = change - (quarters * 25)
+        dimes = Int(change / 10)
+        change = change - (dimes * 10)
+        nickles = Int(change / 5)
+        change = change - (nickles * 5)
+        pennies = Int(change / 1)
+        txtQuarters.Text = CStr(quarters)
+        txtDimes.Text = CStr(dimes)
+        txtNickles.Text = CStr(nickles)
+        txtPennies.Text = CStr(pennies)
+    End Sub
+End Class
